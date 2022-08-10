@@ -1,0 +1,8 @@
+.app {
+	min-height: 100vh;
+	height: 100%;
+	background: linear-gradient(180deg, rgba(247, 247, 247, 0) 11.59%, #f7f7f7 36.96%),
+		linear-gradient(0deg, #d5d9ff, #d5d9ff),
+		linear-gradient(90deg, #00fff0 0%, #bd00ff 39.58%, #ff8700 69.79%, #fff500 100%), #f7f7f7;
+	background-blend-mode: normal, luminosity, normal, normal;
+}

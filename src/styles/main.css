@@ -1,0 +1,79 @@
+html {
+	font-family: 'Montserrat', sans-serif;
+}
+#root {
+	--header-padding: 3.5rem;
+	--header-height: 5rem;
+
+	--fs-100: 1rem;
+	--fs-200: 1.25rem;
+	--fs-300: 1.5rem;
+	--fs-400: 2.5rem;
+	--fs-500: 4rem;
+
+	--fw-light: 300;
+	--fw-normal: 400;
+	--fw-semi-bold: 500;
+	--fw-bold: 900;
+
+	--primary-color: #000000;
+	--secondary-color: rgb(128, 128, 128);
+
+	--gradient-main: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c, #3f87a6, #f69d3c);
+}
+
+.fs-100 {
+	font-size: var(--fs-100);
+}
+.fs-200 {
+	font-size: var(--fs-200);
+}
+.fs-300 {
+	font-size: var(--fs-300);
+}
+.fs-400 {
+	font-size: var(--fs-400);
+}
+.fs-500 {
+	font-size: var(--fs-500);
+}
+
+.fw-light {
+	font-weight: var(--fw-light);
+}
+.fw-normal {
+	font-weight: var(--fw-normal);
+}
+.fw-semi-bold {
+	font-weight: var(--fw-semi-bold);
+}
+.fw-bold {
+	font-weight: var(--fw-bold);
+}
+
+/* Utility styles */
+.container {
+	width: min(100% - var(--container-padding, 2rem), 80rem);
+	margin-inline: auto;
+}
+.even-columns {
+	display: grid;
+	grid-auto-flow: column;
+	grid-auto-columns: 1fr;
+}
+.flex {
+	display: flex;
+}
+.direction-column {
+	flex-direction: column;
+}
+.background-gradient {
+	background: linear-gradient(180deg, rgba(247, 247, 247, 0) 11.59%, #f7f7f7 36.96%),
+		linear-gradient(0deg, #d5d9ff, #d5d9ff),
+		linear-gradient(90deg, #00fff0 0%, #bd00ff 39.58%, #ff8700 69.79%, #fff500 100%), #f7f7f7;
+	background-blend-mode: normal, luminosity, normal, normal;
+}
+.underline-gradient {
+	background: linear-gradient(90deg, #00fff0 0%, #bd00ff 37.55%, #ff8700 68.32%, #fff500 100.13%),
+		#d9d9d9;
+}
