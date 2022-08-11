@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/7sevn-landing/static/css/main.ce9cb281.css",
+    "main.js": "/7sevn-landing/static/js/main.8466a3f7.js",
+    "static/media/sevn.svg": "/7sevn-landing/static/media/sevn.21a5ebe9d0349934cbe5f8b4be153ea2.svg",
+    "static/media/twitter-stroke.svg": "/7sevn-landing/static/media/twitter-stroke.676e1fddfd39997f179f.svg",
+    "static/media/twitter-fill.svg": "/7sevn-landing/static/media/twitter-fill.c62291192c03edfd96ec.svg",
+    "static/media/telegram-fill.svg": "/7sevn-landing/static/media/telegram-fill.050a571d3bd888dc7dad.svg",
+    "static/media/telegram-stroke.svg": "/7sevn-landing/static/media/telegram-stroke.f8c065554d5bf08c5808.svg",
+    "index.html": "/7sevn-landing/index.html",
+    "static/media/medium-fill.svg": "/7sevn-landing/static/media/medium-fill.162c41bbbf1be07a9224.svg",
+    "static/media/medium-stroke.svg": "/7sevn-landing/static/media/medium-stroke.af39f0bd4512a76400ca.svg",
+    "static/media/scroll-icon.svg": "/7sevn-landing/static/media/scroll-icon.2f9ed444406f37f4a2faa89abf2f089f.svg",
+    "main.ce9cb281.css.map": "/7sevn-landing/static/css/main.ce9cb281.css.map",
+    "main.8466a3f7.js.map": "/7sevn-landing/static/js/main.8466a3f7.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ce9cb281.css",
+    "static/js/main.8466a3f7.js"
+  ]
+}
