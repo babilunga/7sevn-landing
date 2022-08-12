@@ -74,6 +74,25 @@ html {
 	background-blend-mode: normal, luminosity, normal, normal;
 }
 .underline-gradient {
-	background: linear-gradient(90deg, #00fff0 0%, #bd00ff 37.55%, #ff8700 68.32%, #fff500 100.13%),
+	background: linear-gradient(
+			90deg,
+			hsl(176, 100%, 50%) 0%,
+			hsl(284, 100%, 50%) 38%,
+			hsl(32, 100%, 50%) 68%,
+			hsl(58, 100%, 50%) 100%
+		),
 		#d9d9d9;
+}
+.layer-front {
+	z-index: 999;
+}
+.layer-back {
+	z-index: -1;
+}
+
+.layer-hero {
+	z-index: 1;
+}
+.layer-adv {
+	z-index: 2;
 }

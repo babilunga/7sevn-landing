@@ -2,8 +2,9 @@
 	position: fixed;
 	height: var(--header-height);
 	width: 100vw;
-	background: rgba(255, 255, 255, 0.5);
+	background: hsl(0, 0%, 100%, 0.5);
 	backdrop-filter: blur(21px);
+	z-index: 999;
 }
 .header-content {
 	height: 100%;
@@ -16,6 +17,7 @@
 	display: flex;
 	align-items: flex-end;
 	flex-shrink: 0;
+	cursor: pointer;
 }
 .logo--number {
 	position: relative;
@@ -32,13 +34,13 @@
 	left: 0;
 	width: 28px;
 	height: 8px;
-	background: linear-gradient(90deg, #ee758c 0%, #e444cb 100%);
+	background: linear-gradient(90deg, hsl(349, 78%, 70%) 0%, hsl(309, 75%, 58%) 100%);
 }
 .logo--vertical-bar {
 	right: 0;
 	width: 8px;
 	height: 40px;
-	background: linear-gradient(201.15deg, #e444cb 5.71%, #6825eb 94.42%);
+	background: linear-gradient(201.15deg, hsl(309, 75%, 58%) 5.71%, hsl(260, 83%, 53%) 94.42%);
 	transform: rotate(35deg);
 	transform-origin: 2px 2px;
 }
@@ -75,7 +77,13 @@
 	left: 0;
 	width: 100%;
 	height: 4px;
-	background: linear-gradient(90deg, #00fff0 0%, #bd00ff 37.55%, #ff8700 68.32%, #fff500 100.13%),
+	background: linear-gradient(
+			90deg,
+			hsl(176, 100%, 50%) 0%,
+			hsl(284, 100%, 50%) 38%,
+			hsl(32, 100%, 50%) 68%,
+			hsl(58, 100%, 50%) 100%
+		),
 		#d9d9d9;
 	transform: scaleX(0);
 	transform-origin: left;

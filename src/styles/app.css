@@ -1,8 +1,27 @@
 .app {
-	min-height: 100vh;
-	height: 100%;
-	background: linear-gradient(180deg, rgba(247, 247, 247, 0) 11.59%, #f7f7f7 36.96%),
-		linear-gradient(0deg, #d5d9ff, #d5d9ff),
-		linear-gradient(90deg, #00fff0 0%, #bd00ff 39.58%, #ff8700 69.79%, #fff500 100%), #f7f7f7;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+
+	scroll-behavior: smooth;
+
+	background: linear-gradient(180deg, hsl(0, 0%, 97%, 0) 11.59%, hsl(0, 0%, 97%) 36.96%),
+		linear-gradient(0deg, hsl(234, 100%, 92%), hsl(234, 100%, 92%)),
+		linear-gradient(
+			90deg,
+			hsl(176, 100%, 50%) 0%,
+			hsl(284, 100%, 50%) 39.58%,
+			hsl(32, 100%, 50%) 69.79%,
+			hsl(58, 100%, 50%) 100%
+		),
+		hsl(0, 0%, 97%);
 	background-blend-mode: normal, luminosity, normal, normal;
+}
+.scrolling-view {
+	scroll-behavior: smooth;
+
+	flex-grow: 1;
+	overflow-y: auto;
+	overflow-x: hidden;
 }

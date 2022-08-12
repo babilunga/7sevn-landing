@@ -7,23 +7,23 @@ function Header() {
 	return (
 		<header className='header'>
 			<div className='container header-content | flex'>
-				<div className='header-logo | '>
+				<a href='#hero' className='header-logo'>
 					<div className='logo--number'>
 						<div className='logo--horizontal-bar'></div>
 						<div className='logo--vertical-bar'></div>
 					</div>
 					<img src={logo_sevn} alt='It is a logo text says SEVN' />
-				</div>
+				</a>
 				<nav className='header-navigation'>
 					<ul my-role='list' className='navigation-list | flex'>
 						<li>
-							<a href='#'>Advantages</a>
+							<a href='#advantages'>Advantages</a>
 						</li>
 						<li>
-							<a href='#'>Why Sevn</a>
+							<a href='#why-sevn'>Why Sevn</a>
 						</li>
 						<li>
-							<a href='#'>Raodmap</a>
+							<a href='#roadmap'>Raodmap</a>
 						</li>
 					</ul>
 				</nav>
