@@ -41,6 +41,7 @@ function Why() {
 						{textContentChanger(descriptions, proportion)}
 					</p>
 				</div>
+
 				<div className='why-media-group'>
 					<img ref={dividendsRef} className='why-media-dividends' src={dividends} alt='' />
 					<img ref={airdropsRef} className='why-media-airdrops' src={airdrops} alt='' />
