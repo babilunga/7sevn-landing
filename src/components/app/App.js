@@ -21,9 +21,9 @@ function App() {
 			<Header />
 			<ScrollContext.Provider value={{ scrollingElement }}>
 				<div className='scrolling-view' ref={scrollingElRef}>
-					<StickyView height={'150vh'}>{<Hero />}</StickyView>
-					<StickyView height={'300vh'}>{<Advantages />}</StickyView>
-					<StickyView height={'250vh'}>{<Why />}</StickyView>
+					<StickyView height={'130vh'}>{<Hero />}</StickyView>
+					<StickyView height={'400vh'}>{<Advantages />}</StickyView>
+					<StickyView height={'400vh'}>{<Why />}</StickyView>
 				</div>
 			</ScrollContext.Provider>
 		</div>

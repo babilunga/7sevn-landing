@@ -1,8 +1,6 @@
 .advantages {
 	padding-top: calc(var(--header-height) / 2);
 	--bottom-margin: 0.625rem;
-	--image-size: 350px;
-	--image-size-calc: calc(var(--image-size) - (90px - 10vh));
 }
 .advantages-content {
 	position: relative;
@@ -27,7 +25,6 @@
 	max-width: var(--image-size);
 	max-height: var(--image-size-calc);
 	aspect-ratio: 1 / 1;
-	/* transform-origin: left top; */
 	transition: all 0.5s ease-out;
 }
 .advantages-media-liquidity {

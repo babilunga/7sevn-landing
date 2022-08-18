@@ -5,6 +5,9 @@ html {
 	--header-padding: 3.5rem;
 	--header-height: 5rem;
 
+	--image-size: 350px;
+	--image-size-calc: calc(var(--image-size) - (90px - 10vh));
+
 	--fs-100: 1rem;
 	--fs-200: 1.25rem;
 	--fs-300: 1.5rem;
@@ -21,37 +24,14 @@ html {
 
 	--gradient-main: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c, #3f87a6, #f69d3c);
 }
-
-.fs-100 {
-	font-size: var(--fs-100);
+.scrolling-view::-webkit-scrollbar {
+	display: none;
 }
-.fs-200 {
-	font-size: var(--fs-200);
-}
-.fs-300 {
-	font-size: var(--fs-300);
-}
-.fs-400 {
-	font-size: var(--fs-400);
-}
-.fs-500 {
-	font-size: var(--fs-500);
+.scrolling-view {
+	scrollbar-width: none;
 }
 
-.fw-light {
-	font-weight: var(--fw-light);
-}
-.fw-normal {
-	font-weight: var(--fw-normal);
-}
-.fw-semi-bold {
-	font-weight: var(--fw-semi-bold);
-}
-.fw-bold {
-	font-weight: var(--fw-bold);
-}
-
-/* Utility styles */
+/* Utility classes */
 .container {
 	width: min(100% - var(--container-padding, 2rem), 80rem);
 	margin-inline: auto;
@@ -86,8 +66,11 @@ html {
 .layer-front {
 	z-index: 999;
 }
-.layer-back {
+.layer-middle {
 	z-index: -1;
+}
+.layer-back {
+	z-index: -2;
 }
 
 .layer-hero {
@@ -95,4 +78,38 @@ html {
 }
 .layer-adv {
 	z-index: 2;
+}
+.layer-why {
+	z-index: 3;
+}
+
+/* Typography */
+
+.fs-100 {
+	font-size: var(--fs-100);
+}
+.fs-200 {
+	font-size: var(--fs-200);
+}
+.fs-300 {
+	font-size: var(--fs-300);
+}
+.fs-400 {
+	font-size: var(--fs-400);
+}
+.fs-500 {
+	font-size: var(--fs-500);
+}
+
+.fw-light {
+	font-weight: var(--fw-light);
+}
+.fw-normal {
+	font-weight: var(--fw-normal);
+}
+.fw-semi-bold {
+	font-weight: var(--fw-semi-bold);
+}
+.fw-bold {
+	font-weight: var(--fw-bold);
 }

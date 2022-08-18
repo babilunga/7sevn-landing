@@ -4,7 +4,7 @@
 	width: 100vw;
 	background: hsl(0, 0%, 100%, 0.5);
 	backdrop-filter: blur(21px);
-	z-index: 999;
+	z-index: 1;
 }
 .header-content {
 	height: 100%;

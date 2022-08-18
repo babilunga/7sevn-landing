@@ -1,5 +1,3 @@
-import './sticky-view.css';
-
 import { useContext, useEffect, useRef, useState } from 'react';
 import ScrollContext from '../../context/ScrollContext';
 import ProportionContext from '../../context/ProportionContext';
@@ -18,13 +16,13 @@ export default function StickyView(props) {
 		if (containerRect.height < selfRect.height) {
 			const viewHeight = selfRect.height - containerRect.height;
 			const result = offTop / viewHeight;
-			setProportion(result);
 			console.log(result);
+			setProportion(result);
 		} else {
 			const viewHeight = containerRect.height;
 			const result = offTop < 0 ? offTop / viewHeight : offTop / viewHeight + 1;
-			setProportion(result);
 			console.log(result);
+			setProportion(result);
 		}
 	}
 
@@ -38,8 +36,17 @@ export default function StickyView(props) {
 
 	return (
 		<ProportionContext.Provider value={{ proportion }}>
-			<div className='sticky-view' ref={elRef} style={{ height: height }}>
-				<div className='sticky-view-sticky'>{children}</div>
+			<div className='sticky-view' ref={elRef} style={{ height, position: 'relative' }}>
+				<div
+					className='sticky-view-content'
+					style={{
+						position: 'sticky',
+						top: 0,
+						width: '100%',
+						height: '100vh',
+					}}>
+					{children}
+				</div>
 			</div>
 		</ProportionContext.Provider>
 	);

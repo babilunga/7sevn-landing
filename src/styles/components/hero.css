@@ -2,7 +2,7 @@
 	position: relative;
 	--skew-degree: 15deg;
 
-	background: linear-gradient(180deg, hsl(0, 0%, 97%, 0) 11.59%, hsl(0, 0%, 97%) 36.96%),
+	/* background: linear-gradient(180deg, hsl(0, 0%, 97%, 0) 11.59%, hsl(0, 0%, 97%) 36.96%),
 		linear-gradient(0deg, hsl(234, 100%, 92%), hsl(234, 100%, 92%)),
 		linear-gradient(
 			90deg,
@@ -12,13 +12,13 @@
 			hsl(58, 100%, 50%) 100%
 		),
 		hsl(0, 0%, 97%);
-	background-blend-mode: normal, luminosity, normal, normal;
-	box-shadow: 0px 100px 50px 50px rgb(247, 247, 247);
+	background-blend-mode: normal, luminosity, normal, normal; */
+	/* box-shadow: 0px 100px 50px 50px rgb(247, 247, 247); */
 }
 
 .hero-content {
 	position: relative;
-	height: 100vh;
+	min-height: 100vh;
 	display: grid;
 	place-content: center;
 	place-items: center;
@@ -124,22 +124,14 @@
 	position: absolute;
 	left: 0;
 	width: 100%;
-	height: 100%;
-	background-size: 100%;
-	background-repeat: no-repeat;
 	pointer-events: none;
 }
 .hero-background-front {
-	bottom: calc(-50% - (200px - 15vw));
-	background-image: url('../../assets/img/hero/front.png');
-
-	box-shadow: 0px 200px 70px 70px rgb(247, 247, 247);
+	bottom: calc(-58%);
 }
 .hero-background-middle {
-	bottom: -25%;
-	background-image: url('../../assets/img/hero/middle.png');
+	bottom: -8%;
 }
 .hero-background-back {
-	bottom: -10%;
-	background-image: url('../../assets/img/hero/back.png');
+	bottom: -11%;
 }
