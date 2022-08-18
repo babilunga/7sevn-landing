@@ -1,13 +1,16 @@
 {
   "files": {
-    "main.css": "/7sevn-landing/static/css/main.e759ac27.css",
-    "main.js": "/7sevn-landing/static/js/main.1040d47a.js",
+    "main.css": "/7sevn-landing/static/css/main.9c10a32c.css",
+    "main.js": "/7sevn-landing/static/js/main.34a687b7.js",
+    "static/media/dashboard.png": "/7sevn-landing/static/media/dashboard.8f1cda5c1b7325de9324.png",
+    "static/media/liquidity.png": "/7sevn-landing/static/media/liquidity.fec2b089e2a777573706.png",
+    "static/media/airdrops.png": "/7sevn-landing/static/media/airdrops.82e5674a37b8e18eb458.png",
+    "static/media/reduction.png": "/7sevn-landing/static/media/reduction.abf413807076963e3548.png",
+    "static/media/dividends.png": "/7sevn-landing/static/media/dividends.359d4928e4b543a51fc5.png",
+    "static/media/pools.png": "/7sevn-landing/static/media/pools.62b4d2bc5f087995aa49.png",
     "static/media/front.png": "/7sevn-landing/static/media/front.51e580918a099173bbc4.png",
     "static/media/middle.png": "/7sevn-landing/static/media/middle.40d4a1cefdd94f3b1259.png",
     "static/media/back.png": "/7sevn-landing/static/media/back.87f0d9936e35c8b4e262.png",
-    "static/media/dashboard.png": "/7sevn-landing/static/media/dashboard.c2ac0c122e5d961220c8.png",
-    "static/media/liquidity.png": "/7sevn-landing/static/media/liquidity.ec9ecc33b023d289c254.png",
-    "static/media/pools.png": "/7sevn-landing/static/media/pools.04f451a89d3c6a15127d.png",
     "static/media/sevn.svg": "/7sevn-landing/static/media/sevn.21a5ebe9d0349934cbe5f8b4be153ea2.svg",
     "static/media/twitter-stroke.svg": "/7sevn-landing/static/media/twitter-stroke.676e1fddfd39997f179f.svg",
     "static/media/twitter-fill.svg": "/7sevn-landing/static/media/twitter-fill.c62291192c03edfd96ec.svg",
@@ -17,11 +20,11 @@
     "static/media/medium-fill.svg": "/7sevn-landing/static/media/medium-fill.162c41bbbf1be07a9224.svg",
     "static/media/medium-stroke.svg": "/7sevn-landing/static/media/medium-stroke.af39f0bd4512a76400ca.svg",
     "static/media/scroll-icon.svg": "/7sevn-landing/static/media/scroll-icon.2f9ed444406f37f4a2faa89abf2f089f.svg",
-    "main.e759ac27.css.map": "/7sevn-landing/static/css/main.e759ac27.css.map",
-    "main.1040d47a.js.map": "/7sevn-landing/static/js/main.1040d47a.js.map"
+    "main.9c10a32c.css.map": "/7sevn-landing/static/css/main.9c10a32c.css.map",
+    "main.34a687b7.js.map": "/7sevn-landing/static/js/main.34a687b7.js.map"
   },
   "entrypoints": [
-    "static/css/main.e759ac27.css",
-    "static/js/main.1040d47a.js"
+    "static/css/main.9c10a32c.css",
+    "static/js/main.34a687b7.js"
   ]
 }
