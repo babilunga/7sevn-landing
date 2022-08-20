@@ -17,18 +17,21 @@ html {
 	--fw-light: 300;
 	--fw-normal: 400;
 	--fw-semi-bold: 500;
-	--fw-bold: 900;
+	--fw-bold: 600;
+	--fw-black: 900;
 
 	--primary-color: #000000;
-	--secondary-color: rgb(128, 128, 128);
+	--secondary-color: #808080;
 
 	--gradient-main: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c, #3f87a6, #f69d3c);
 }
-.scrolling-view::-webkit-scrollbar {
-	display: none;
-}
-.scrolling-view {
-	scrollbar-width: none;
+.section-name {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	max-height: 100%;
+	transition: opacity 200ms ease-in;
+	z-index: 999;
 }
 
 /* Utility classes */
@@ -63,6 +66,9 @@ html {
 		),
 		#d9d9d9;
 }
+.secondary {
+	color: var(--secondary-color);
+}
 .layer-front {
 	z-index: 999;
 }
@@ -81,6 +87,9 @@ html {
 }
 .layer-why {
 	z-index: 3;
+}
+.layer-roadmap {
+	z-index: 4;
 }
 
 /* Typography */
@@ -112,4 +121,7 @@ html {
 }
 .fw-bold {
 	font-weight: var(--fw-bold);
+}
+.fw-black {
+	font-weight: var(--fw-black);
 }

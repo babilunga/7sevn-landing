@@ -1,9 +1,9 @@
 .why {
-	padding-top: calc(var(--header-height) / 2);
+	padding-top: var(--header-height);
 }
 .why-content {
 	position: relative;
-	height: 100vh;
+	height: calc(100vh - var(--header-height));
 	display: grid;
 	gap: 80px;
 	grid-template-columns: 1fr 1fr;
@@ -43,8 +43,4 @@
 }
 .why-media-dividends {
 	max-width: 100%;
-}
-.why-media-airdrops {
-}
-.why-media-reduction {
 }

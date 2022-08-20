@@ -61,3 +61,56 @@ export function mediaIntersection([first, second, third], proportion, direction)
 		third.style.filter = 'saturate(1)';
 	}
 }
+
+export function backgroundIntersection(layer, proportion) {
+	const style = {};
+
+	switch (layer) {
+		case 'front':
+			if (proportion > 2 && proportion < 2.5) {
+				style.transform = `translateY(-${70 - proportion * 18}%) translateX(-50%)`;
+			} else if (proportion >= 2.5) {
+				style.transform = `translateY(-${60 - proportion * 18}%) translateX(-50%)`;
+			} else if (proportion <= 2) {
+				style.transform = `translateY(-${proportion * 18}%) translateX(-50%)`;
+			}
+			break;
+		case 'middle':
+			style.transform = `translateY(${proportion * 2}%) translateX(-50%)`;
+			break;
+		case 'back':
+			style.transform = `translateY(${proportion * 15}%) translateX(-50%)`;
+			break;
+		default:
+			style.transform = `translateY(-${proportion * 0.8}%) translateX(-50%)`;
+			break;
+	}
+
+	if (proportion > 1.8 && layer !== 'front') {
+		style.opacity = 0;
+	}
+
+	return style;
+}
+
+export function heroContentIntersection(proportion) {
+	return {
+		transform: `translateY(-${proportion * 12}%)`,
+	};
+}
+
+export function sectionNameIntersection(proportion) {
+	if (proportion < 0) {
+		return {
+			opacity: 0,
+		};
+	} else if (proportion >= 0 && proportion < 0.9) {
+		return {
+			opacity: 1,
+		};
+	} else if (proportion >= 0.9) {
+		return {
+			opacity: 0,
+		};
+	}
+}

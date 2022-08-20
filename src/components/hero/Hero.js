@@ -8,50 +8,15 @@ import backgroundBack from '../../assets/img/hero/back.png';
 import backgroundMiddle from '../../assets/img/hero/middle.png';
 import backgroundFront from '../../assets/img/hero/front.png';
 
+import { heroContentIntersection, backgroundIntersection } from '../../helpers/utilities';
+
 function Hero() {
 	const { proportion } = useContext(ProportionContext);
 
-	function contentIntersection() {
-		return {
-			transform: `translateY(-${proportion * 12}%)`,
-		};
-	}
-
-	function backgroundIntersection(layer) {
-		const style = {};
-
-		switch (layer) {
-			case 'front':
-				if (proportion > 2 && proportion < 2.5) {
-					style.transform = `translateY(-${70 - proportion * 18}%)`;
-				} else if (proportion >= 2.5) {
-					style.transform = `translateY(-${60 - proportion * 18}%)`;
-				} else if (proportion <= 2) {
-					style.transform = `translateY(-${proportion * 18}%)`;
-				}
-				break;
-			case 'middle':
-				style.transform = `translateY(${proportion * 2}%)`;
-				break;
-			case 'back':
-				style.transform = `translateY(${proportion * 15}%)`;
-				break;
-			default:
-				style.transform = `translateY(-${proportion * 0.8}%)`;
-				break;
-		}
-
-		if (proportion > 1.8 && layer !== 'front') {
-			style.opacity = 0;
-		}
-
-		return style;
-	}
-
 	return (
 		<section id='hero' className='hero | layer-hero' aria-labelledby='hero-section-title'>
-			<div className='hero-content' style={contentIntersection()}>
-				<h1 id='hero-section-title' className='hero-title | fs-500 fw-bold'>
+			<div className='hero-content' style={heroContentIntersection(proportion)}>
+				<h1 id='hero-section-title' className='hero-title | fs-500 fw-black'>
 					First GameFi Dex
 				</h1>
 				<p className='hero-text | fs-200 fw-semi-bold'>Best way to swap gaming tokens</p>
@@ -64,22 +29,22 @@ function Hero() {
 					</a>
 				</div>
 				<img
-					style={backgroundIntersection('back')}
+					style={backgroundIntersection('back', proportion)}
 					className='hero-background hero-background-back | layer-back'
 					src={backgroundBack}
-					alt=''
+					alt='Colorful wave background behind everything'
 				/>
 				<img
-					style={backgroundIntersection('middle')}
+					style={backgroundIntersection('middle', proportion)}
 					className='hero-background hero-background-middle | layer-middle'
 					src={backgroundMiddle}
-					alt=''
+					alt='Colorful wave background in the middle of layering'
 				/>
 				<img
-					style={backgroundIntersection('front')}
+					style={backgroundIntersection('front', proportion)}
 					className='hero-background hero-background-front | layer-front'
 					src={backgroundFront}
-					alt=''
+					alt='Colorful wave background at the front of all the hero content'
 				/>
 				<img
 					src={scrollIcon}

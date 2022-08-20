@@ -6,8 +6,14 @@ import ProportionContext from '../../context/ProportionContext';
 import liquidity from '../../assets/img/advantages/liquidity.png';
 import dashboard from '../../assets/img/advantages/dashboard.png';
 import pools from '../../assets/img/advantages/pools.png';
+import sectionName from '../../assets/img/sections/advantages.svg';
 
-import { textContentChanger, mediaIntersection } from '../../helpers/utilities';
+import {
+	textContentChanger,
+	mediaIntersection,
+	sectionNameIntersection,
+} from '../../helpers/utilities';
+import { advantagesData } from '../../data/data';
 
 function Advantages() {
 	const { proportion } = useContext(ProportionContext);
@@ -16,12 +22,7 @@ function Advantages() {
 	const poolsRef = useRef(null);
 	const dashboardRef = useRef(null);
 
-	const titles = ['Best liquidity for GamiFi', 'Most profitable pools', 'Useful Dashboard'];
-	const descriptions = [
-		'Trade utility tokens of gaming projects with lowest slippage and transaction costs',
-		'Earn more with farmming pools with highest APR for gaming projects',
-		'Simple way to track your earnings from all sources on Sevn',
-	];
+	const { titles, descriptions } = advantagesData;
 
 	useEffect(() => {
 		if (liquidityRef.current && poolsRef.current && dashboardRef.current) {
@@ -36,7 +37,13 @@ function Advantages() {
 	return (
 		<section aria-label='Advantages section' id='advantages' className='advantages | layer-adv'>
 			<div className='advantages-content'>
-				<h2 className='advantages-title | fs-400 fw-bold'>
+				<img
+					style={sectionNameIntersection(proportion)}
+					className='section-name'
+					src={sectionName}
+					alt='Uppercase text Advantages, section name'
+				/>
+				<h2 className='advantages-title | fs-400 fw-black'>
 					{textContentChanger(titles, proportion)}
 				</h2>
 				<div className='advantages-media-group'>

@@ -1,24 +1,12 @@
 .hero {
+	padding-top: var(--header-height);
 	position: relative;
 	--skew-degree: 15deg;
-
-	/* background: linear-gradient(180deg, hsl(0, 0%, 97%, 0) 11.59%, hsl(0, 0%, 97%) 36.96%),
-		linear-gradient(0deg, hsl(234, 100%, 92%), hsl(234, 100%, 92%)),
-		linear-gradient(
-			90deg,
-			hsl(176, 100%, 50%) 0%,
-			hsl(284, 100%, 50%) 39.58%,
-			hsl(32, 100%, 50%) 69.79%,
-			hsl(58, 100%, 50%) 100%
-		),
-		hsl(0, 0%, 97%);
-	background-blend-mode: normal, luminosity, normal, normal; */
-	/* box-shadow: 0px 100px 50px 50px rgb(247, 247, 247); */
 }
 
 .hero-content {
 	position: relative;
-	min-height: 100vh;
+	height: calc(100vh - var(--header-height));
 	display: grid;
 	place-content: center;
 	place-items: center;
@@ -122,16 +110,23 @@
 }
 .hero-background {
 	position: absolute;
-	left: 0;
+	left: 50%;
+	transform: translateX(-50%);
 	width: 100%;
+	min-width: 945px;
+	/* width: clamp(300px, 100vw, 2560px); */
+	/* min-width: 1440px; */
 	pointer-events: none;
 }
 .hero-background-front {
-	bottom: calc(-58%);
+	top: 55%;
+	/* bottom: -58%; */
 }
 .hero-background-middle {
-	bottom: -8%;
+	top: 20%;
+	/* bottom: -8%; */
 }
 .hero-background-back {
-	bottom: -11%;
+	top: 3%;
+	/* bottom: -11%; */
 }

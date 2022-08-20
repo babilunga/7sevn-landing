@@ -200,8 +200,8 @@ ul {
 	padding: 0;
 	margin: 0;
 }
-ul[my-role='list'],
-ol[my-role='list'] {
+ul[my-role='nav'],
+ol[my-role='nav'] {
 	list-style: none;
 }
 a {
