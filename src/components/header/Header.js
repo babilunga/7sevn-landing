@@ -57,6 +57,7 @@ function Header({ currentSection }) {
 							</li>
 						))}
 					</ul>
+
 					<div className='header-media | flex'>
 						<a
 							href={links.discord}
