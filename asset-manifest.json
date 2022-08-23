@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/7sevn-landing/static/css/main.1c10a9ad.css",
-    "main.js": "/7sevn-landing/static/js/main.0452bcaa.js",
+    "main.css": "/7sevn-landing/static/css/main.3dddeca1.css",
+    "main.js": "/7sevn-landing/static/js/main.fd24c84e.js",
     "static/media/dashboard.png": "/7sevn-landing/static/media/dashboard.8f1cda5c1b7325de9324.png",
     "static/media/liquidity.png": "/7sevn-landing/static/media/liquidity.e4304d85d6e0e9b39206.png",
     "static/media/dividends.png": "/7sevn-landing/static/media/dividends.abf413807076963e3548.png",
@@ -30,11 +30,11 @@
     "static/media/medium-stroke.svg": "/7sevn-landing/static/media/medium-stroke.af39f0bd4512a76400ca.svg",
     "static/media/scroll-icon.svg": "/7sevn-landing/static/media/scroll-icon.2f9ed444406f37f4a2faa89abf2f089f.svg",
     "static/media/one.svg": "/7sevn-landing/static/media/one.1a571902da79bdb50fb661c37280ac49.svg",
-    "main.1c10a9ad.css.map": "/7sevn-landing/static/css/main.1c10a9ad.css.map",
-    "main.0452bcaa.js.map": "/7sevn-landing/static/js/main.0452bcaa.js.map"
+    "main.3dddeca1.css.map": "/7sevn-landing/static/css/main.3dddeca1.css.map",
+    "main.fd24c84e.js.map": "/7sevn-landing/static/js/main.fd24c84e.js.map"
   },
   "entrypoints": [
-    "static/css/main.1c10a9ad.css",
-    "static/js/main.0452bcaa.js"
+    "static/css/main.3dddeca1.css",
+    "static/js/main.fd24c84e.js"
   ]
 }
