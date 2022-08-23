@@ -13,8 +13,9 @@ function Header() {
 		buttonRef.current.classList.toggle('burger-menu-active');
 	}, [isHamburgerPressed]);
 
-	function burgerMenuTrigger() {
-		setIsHamburgerPressed(prev => !prev);
+	function burgerMenuTrigger(to) {
+		if (to === 'off') setIsHamburgerPressed(false);
+		else setIsHamburgerPressed(prev => !prev);
 	}
 
 	return (
@@ -23,7 +24,7 @@ function Header() {
 				<a
 					onMouseEnter={() => setIsHoveredLogo(true)}
 					onMouseLeave={() => setIsHoveredLogo(false)}
-					href='#hero'
+					href='#top'
 					className='header-logo'>
 					<div className='logo--number'>
 						<div className={`logo--horizontal-bar ${isHoveredLogo ? 'logo-in' : 'logo-out'}`}></div>
@@ -31,16 +32,15 @@ function Header() {
 					</div>
 					<img src={logo_sevn} alt='It is a logo text says SEVN' />
 				</a>
-				<div
-					className='burger-menu-trigger'
-					role='button'
-					ref={buttonRef}
-					onClick={burgerMenuTrigger}>
+				<button className='burger-menu-trigger' ref={buttonRef} onClick={burgerMenuTrigger}>
 					<span className='burger-line-first'></span>
 					<span className='burger-line-second'></span>
 					<span className='burger-line-third'></span>
-				</div>
-				<nav className='header-navigation'>
+				</button>
+				<nav
+					className='header-navigation'
+					data-open={isHamburgerPressed}
+					onClick={() => burgerMenuTrigger('off')}>
 					<ul my-role='nav' className='navigation-list | flex'>
 						<li>
 							<a className='nav-link' href='#advantages'>

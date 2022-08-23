@@ -5,7 +5,7 @@ import four from '../assets/img/roadmap/four.svg';
 import five from '../assets/img/roadmap/five.svg';
 
 export const advantagesData = {
-	titles: ['Best liquidity for GamiFi', 'Most profitable pools', 'Useful Dashboard'],
+	titles: ['Best liquidity for GamiFi', 'Most profitable pools', 'Dashboard'],
 	descriptions: [
 		'Trade utility tokens of gaming projects with lowest slippage and transaction costs',
 		'Earn more with farmming pools with highest APR for gaming projects',

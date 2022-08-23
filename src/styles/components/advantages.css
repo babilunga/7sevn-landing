@@ -1,25 +1,27 @@
 .advantages {
 	padding-top: var(--header-height);
 	--bottom-margin: 0.625rem;
+	position: relative;
 }
 .advantages-content {
-	position: relative;
 	height: calc(100vh - var(--header-height));
-	display: grid;
-	place-content: center;
-	place-items: center;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 }
 .advantages-title {
 	text-transform: uppercase;
+	width: 100%;
 }
 .advantages-media-group {
 	position: relative;
 	width: 100vw;
-	margin-bottom: var(--image-size-calc);
+	height: var(--image-size-calc);
 }
 .advantages-media-group > * {
 	position: absolute;
-	top: 0;
+	width: var(--image-size);
+	top: 50%;
 	left: 50%;
 	transform: translateX(-50%);
 	max-width: var(--image-size);
@@ -28,13 +30,13 @@
 	transition: all 0.5s ease-out;
 }
 .advantages-media-liquidity {
-	transform: translateX(-50%) rotate(0deg);
+	/* transform: translateX(-50%) rotate(0deg); */
 }
 .advantages-media-pools {
-	transform: translateX(calc(-50% + 125%)) rotate(15deg);
+	/* transform: translateX(calc(-50% + 125%)) rotate(15deg); */
 }
 .advantages-media-dashboard {
-	transform: translateX(calc(-50% + 250%)) rotate(15deg);
+	/* transform: translateX(calc(-50% + 250%)) rotate(15deg); */
 }
 .advantages-description {
 	text-align: center;

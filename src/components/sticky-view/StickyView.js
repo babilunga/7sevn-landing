@@ -16,12 +16,10 @@ export default function StickyView(props) {
 		if (containerRect.height < selfRect.height) {
 			const viewHeight = selfRect.height - containerRect.height;
 			const result = offTop / viewHeight;
-			console.log(result);
 			setProportion(result);
 		} else {
 			const viewHeight = containerRect.height;
 			const result = offTop < 0 ? offTop / viewHeight : offTop / viewHeight + 1;
-			console.log(result);
 			setProportion(result);
 		}
 	}

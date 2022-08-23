@@ -12,7 +12,7 @@ function RoadmapCard({ image, title, steps }) {
 				<h3 className='card-title | fs-200 fw-bold'>{title}</h3>
 				<ul className='card-steps'>
 					{steps.map((item, index) => (
-						<li key={index} className='secondary'>
+						<li key={index} className='secondary fs-100'>
 							{item}
 						</li>
 					))}

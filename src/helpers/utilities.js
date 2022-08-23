@@ -5,6 +5,8 @@ const SCROLL_DISTANCE = 200;
 const firstStep = SCROLL_DISTANCE - 50;
 const secondStep = SCROLL_DISTANCE + 50 + 30;
 
+const DISAPPEAR_RANGE = 3.65;
+
 const DEGREE = '20deg';
 
 export function textContentChanger([first, second, third, ...rest], proportion) {
@@ -20,66 +22,104 @@ export function textContentChanger([first, second, third, ...rest], proportion) 
 	}
 }
 
-export function mediaIntersection([first, second, third], proportion, direction) {
-	const axis = direction.toUpperCase();
-
+export function mediaIntersectionY([first, second, third], proportion) {
 	if (proportion <= LOWER_LIMIT) {
-		first.style.transform = `translate${axis}(-50%) rotate(0deg)`;
+		first.style.transform = `translateY(-50%) translateX(-50%) rotate(0deg)`;
 		first.style.opacity = 1;
-		first.style.filter = 'saturate(1)';
+		first.style.filter = 'blur(0px)';
 
-		second.style.transform = `translate${axis}(calc(-50% + ${firstStep}%)) rotate(${DEGREE})`;
-		second.style.filter = 'saturate(0.7)';
-		second.style.opacity = 0.7;
+		second.style.transform = `translateY(calc(-50% + ${firstStep}%)) translateX(-50%) rotate(${DEGREE})`;
+		second.style.filter = 'blur(5px)';
+		second.style.opacity = 0.3;
 
-		third.style.transform = `translate${axis}(calc(-50% + ${secondStep}%)) rotate(${DEGREE})`;
-		third.style.filter = 'saturate(0.2)';
-		third.style.opacity = 0.2;
+		third.style.transform = `translateY(calc(-50% + ${secondStep}%)) translateX(-50%) rotate(${DEGREE})`;
+		third.style.filter = 'blur(5px)';
+		third.style.opacity = 0.3;
 	} else if (proportion > LOWER_LIMIT && proportion < UPPER_LIMIT) {
-		first.style.transform = `translate${axis}(calc(-50% - ${firstStep}%)) rotate(${DEGREE})`;
-		first.style.filter = 'saturate(0.7)';
-		first.style.opacity = 0.7;
+		first.style.transform = `translateY(calc(-50% - ${firstStep}%)) translateX(-50%) rotate(${DEGREE})`;
+		first.style.filter = 'blur(5px)';
+		first.style.opacity = 0.3;
 
-		second.style.transform = `translate${axis}(-50%) rotate(0deg)`;
+		second.style.transform = `translateY(-50%) translateX(-50%) rotate(0deg)`;
 		second.style.opacity = 1;
-		second.style.filter = 'saturate(1)';
+		second.style.filter = 'blur(0px)';
 
-		third.style.transform = `translate${axis}(calc(-50% + ${firstStep}%)) rotate(${DEGREE})`;
-		third.style.filter = 'saturate(0.7)';
-		third.style.opacity = 0.7;
+		third.style.transform = `translateY(calc(-50% + ${firstStep}%)) translateX(-50%) rotate(${DEGREE})`;
+		third.style.filter = 'blur(5px)';
+		third.style.opacity = 0.3;
 	} else if (proportion >= UPPER_LIMIT) {
-		first.style.transform = `translate${axis}(calc(-50% - ${secondStep}%)) rotate(${DEGREE})`;
-		first.style.filter = 'saturate(0.2)';
-		first.style.opacity = 0.2;
+		first.style.transform = `translateY(calc(-50% - ${secondStep}%)) translateX(-50%) rotate(${DEGREE})`;
+		first.style.filter = 'blur(5px)';
+		first.style.opacity = 0.3;
 
-		second.style.transform = `translate${axis}(calc(-50% - ${firstStep}%)) rotate(${DEGREE})`;
-		second.style.filter = 'saturate(0.7)';
-		second.style.opacity = 0.7;
+		second.style.transform = `translateY(calc(-50% - ${firstStep}%)) translateX(-50%) rotate(${DEGREE})`;
+		second.style.filter = 'blur(5px)';
+		second.style.opacity = 0.3;
 
-		third.style.transform = `translate${axis}(-50%) rotate(0deg)`;
+		third.style.transform = `translateY(-50%) translateX(-50%) rotate(0deg)`;
 		third.style.opacity = 1;
-		third.style.filter = 'saturate(1)';
+		third.style.filter = 'blur(0px)';
+	}
+}
+
+export function mediaIntersectionX([first, second, third], proportion) {
+	if (proportion <= LOWER_LIMIT) {
+		first.style.transform = `translateX(-50%) translateY(-50%) rotate(0deg)`;
+		first.style.opacity = 1;
+		first.style.filter = 'blur(0px)';
+
+		second.style.transform = `translateX(calc(-50% + ${firstStep}%)) translateY(-50%) rotate(${DEGREE})`;
+		second.style.filter = 'blur(5px)';
+		second.style.opacity = 0.3;
+
+		third.style.transform = `translateX(calc(-50% + ${secondStep}%)) translateY(-50%) rotate(${DEGREE})`;
+		third.style.filter = 'blur(5px)';
+		third.style.opacity = 0.3;
+	} else if (proportion > LOWER_LIMIT && proportion < UPPER_LIMIT) {
+		first.style.transform = `translateX(calc(-50% - ${firstStep}%)) translateY(-50%) rotate(${DEGREE})`;
+		first.style.filter = 'blur(5px)';
+		first.style.opacity = 0.3;
+
+		second.style.transform = `translateX(-50%) translateY(-50%) rotate(0deg)`;
+		second.style.opacity = 1;
+		second.style.filter = 'blur(0px)';
+
+		third.style.transform = `translateX(calc(-50% + ${firstStep}%)) translateY(-50%) rotate(${DEGREE})`;
+		third.style.filter = 'blur(5px)';
+		third.style.opacity = 0.3;
+	} else if (proportion >= UPPER_LIMIT) {
+		first.style.transform = `translateX(calc(-50% - ${secondStep}%)) translateY(-50%) rotate(${DEGREE})`;
+		first.style.filter = 'blur(5px)';
+		first.style.opacity = 0.3;
+
+		second.style.transform = `translateX(calc(-50% - ${firstStep}%)) translateY(-50%) rotate(${DEGREE})`;
+		second.style.filter = 'blur(5px)';
+		second.style.opacity = 0.3;
+
+		third.style.transform = `translateX(-50%) translateY(-50%) rotate(0deg)`;
+		third.style.opacity = 1;
+		third.style.filter = 'blur(0px)';
 	}
 }
 
 export function backgroundIntersection(layer, proportion) {
 	const style = {};
 
+	if (proportion > DISAPPEAR_RANGE) {
+		return {
+			display: 'none',
+		};
+	}
+
 	switch (layer) {
 		case 'front':
-			if (proportion > 2 && proportion < 2.5) {
-				style.transform = `translateY(-${70 - proportion * 18}%) translateX(-50%)`;
-			} else if (proportion >= 2.5) {
-				style.transform = `translateY(-${60 - proportion * 18}%) translateX(-50%)`;
-			} else if (proportion <= 2) {
-				style.transform = `translateY(-${proportion * 18}%) translateX(-50%)`;
-			}
+			style.transform = `translateY(-${proportion * 30}%) translateX(-50%)`;
 			break;
 		case 'middle':
-			style.transform = `translateY(${proportion * 2}%) translateX(-50%)`;
+			style.transform = `translateY(${proportion * 5}%) translateX(-50%)`;
 			break;
 		case 'back':
-			style.transform = `translateY(${proportion * 15}%) translateX(-50%)`;
+			style.transform = `translateY(${proportion * 20}%) translateX(-50%)`;
 			break;
 		default:
 			style.transform = `translateY(-${proportion * 0.8}%) translateX(-50%)`;
@@ -94,6 +134,11 @@ export function backgroundIntersection(layer, proportion) {
 }
 
 export function heroContentIntersection(proportion) {
+	if (proportion > DISAPPEAR_RANGE) {
+		return {
+			display: 'none',
+		};
+	}
 	return {
 		transform: `translateY(-${proportion * 12}%)`,
 	};
@@ -113,4 +158,30 @@ export function sectionNameIntersection(proportion) {
 			opacity: 0,
 		};
 	}
+}
+
+export function disappearIntersection(proportion) {
+	if (proportion > 1) {
+		return {
+			opacity: 1 - (proportion - 1),
+		};
+	}
+}
+export function roadmapIntersection(proportion) {
+	const style = {};
+	const width = window.innerWidth;
+
+	if (width > 1440) {
+		style.transform = `translateX(-${70 * proportion}%) translateY(-50%)`;
+	} else if (width <= 1440 && width > 1250) {
+		style.transform = `translateX(-${65 * proportion}%) translateY(-50%)`;
+	} else if (width <= 1250 && width > 960) {
+		style.transform = `translateX(-${75 * proportion}%) translateY(-50%)`;
+	} else if (width <= 960 && width > 720) {
+		style.transform = `translateX(-${83 * proportion}%) translateY(-50%)`;
+	} else if (width <= 720) {
+		style.transform = `translateY(-${50 * proportion}%) translateX(-50%)`;
+	}
+
+	return style;
 }

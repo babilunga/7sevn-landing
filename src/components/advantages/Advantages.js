@@ -10,7 +10,7 @@ import sectionName from '../../assets/img/sections/advantages.svg';
 
 import {
 	textContentChanger,
-	mediaIntersection,
+	mediaIntersectionX,
 	sectionNameIntersection,
 } from '../../helpers/utilities';
 import { advantagesData } from '../../data/data';
@@ -26,7 +26,7 @@ function Advantages() {
 
 	useEffect(() => {
 		if (liquidityRef.current && poolsRef.current && dashboardRef.current) {
-			mediaIntersection(
+			mediaIntersectionX(
 				[liquidityRef.current, poolsRef.current, dashboardRef.current],
 				proportion,
 				'x'
@@ -35,15 +35,18 @@ function Advantages() {
 	}, [proportion, liquidityRef, poolsRef, dashboardRef]);
 
 	return (
-		<section aria-label='Advantages section' id='advantages' className='advantages | layer-adv'>
-			<div className='advantages-content'>
+		<section
+			aria-label='Advantages section'
+			// id='advantages'
+			className='advantages | layer-adv'>
+			<div className='advantages-content | flex container'>
 				<img
 					style={sectionNameIntersection(proportion)}
 					className='section-name'
 					src={sectionName}
 					alt='Uppercase text Advantages, section name'
 				/>
-				<h2 className='advantages-title | fs-400 fw-black'>
+				<h2 className='advantages-title | fs-400 fw-black text-center'>
 					{textContentChanger(titles, proportion)}
 				</h2>
 				<div className='advantages-media-group'>

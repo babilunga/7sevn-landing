@@ -1,11 +1,13 @@
 import '../../styles/components/why.css';
 
-import { useContext, useEffect, useRef } from 'react';
+import { useContext, useEffect, useRef, useState } from 'react';
 import ProportionContext from '../../context/ProportionContext';
 import {
-	mediaIntersection,
+	mediaIntersectionY,
+	mediaIntersectionX,
 	sectionNameIntersection,
 	textContentChanger,
+	disappearIntersection,
 } from '../../helpers/utilities.js';
 
 import dividends from '../../assets/img/why/dividends.png';
@@ -17,6 +19,7 @@ import sectionName from '../../assets/img/sections/why.svg';
 import { whyData } from '../../data/data';
 
 function Why() {
+	const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 	const { proportion } = useContext(ProportionContext);
 	const { titles, descriptions } = whyData;
 
@@ -25,35 +28,48 @@ function Why() {
 	const reductionRef = useRef(null);
 
 	useEffect(() => {
+		window.addEventListener('resize', resizeCapture);
+
+		return window.removeEventListener('resize', resizeCapture);
+	}, []);
+
+	function resizeCapture() {
+		setWindowWidth(window.innerWidth);
+	}
+
+	useEffect(() => {
 		const div = dividendsRef.current;
 		const air = airdropsRef.current;
 		const red = reductionRef.current;
 
 		if (div && air && red) {
-			mediaIntersection([div, air, red], proportion, 'y');
+			if (windowWidth < 640) {
+				mediaIntersectionX([div, air, red], proportion);
+			} else {
+				mediaIntersectionY([div, air, red], proportion);
+			}
 		}
-	}, [proportion]);
+	}, [proportion, windowWidth]);
 
 	return (
-		<section aria-label='Why Sevn section' id='why' className='why | layer-why'>
-			<div className='why-content'>
+		<section aria-label='Why Sevn section' className='why | layer-why'>
+			<div className='why-content | container'>
 				<img
 					style={sectionNameIntersection(proportion)}
 					className='section-name'
 					src={sectionName}
 					alt='Uppercase text Why, section name'
 				/>
-				<div className='why-text'>
-					<h2 className='why-title | fs-400 fw-black'>{textContentChanger(titles, proportion)}</h2>
-					<p className='why-description | fs-300 fw-light'>
-						{textContentChanger(descriptions, proportion)}
-					</p>
-				</div>
-
 				<div className='why-media-group'>
 					<img ref={dividendsRef} className='why-media-dividends' src={dividends} alt='' />
 					<img ref={airdropsRef} className='why-media-airdrops' src={airdrops} alt='' />
 					<img ref={reductionRef} className='why-media-reduction' src={reduction} alt='' />
+				</div>
+				<div className='why-text' style={disappearIntersection(proportion)}>
+					<h2 className='why-title | fs-400 fw-black'>{textContentChanger(titles, proportion)}</h2>
+					<p className='why-description | fs-300 fw-light'>
+						{textContentChanger(descriptions, proportion)}
+					</p>
 				</div>
 			</div>
 		</section>

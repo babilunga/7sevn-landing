@@ -2,43 +2,45 @@
 	position: relative;
 	padding-top: var(--header-height);
 	position: relative;
-	height: calc(100vh - var(--header-height));
+	height: 100vh;
 }
 .roadmap-content {
+	position: relative;
+	height: 100%;
+	width: 100%;
+}
+.roadmap-cards {
 	position: absolute;
 	display: flex;
-	align-items: center;
-
 	top: 50%;
 	left: 15%;
-	transform: translateY(-20%);
 }
-.roadmap-content > div {
+.roadmap-card-bundle {
 	display: flex;
 	width: max-content;
 }
 .roadmap-card {
 	position: relative;
-	width: 370px;
-	height: 150px;
+	width: 23.125rem;
+	height: 9.375rem;
+	min-width: 315px;
+	min-height: 150px;
 	background-color: #fff;
 	box-shadow: 0px 25px 58px rgba(187, 187, 187, 0.15);
 	border-radius: 20px 0px;
 	overflow: hidden;
 	flex-shrink: 0;
 }
-.roadmap-content > div:nth-child(1) .roadmap-card,
-.roadmap-content > div:nth-child(3) .roadmap-card {
+.roadmap-cards > div:nth-child(1) .roadmap-card,
+.roadmap-cards > div:nth-child(3) .roadmap-card,
+.roadmap-cards > div:last-child .roadmap-card {
 	transform: translateY(-20%);
 }
-.roadmap-content > div:last-child .roadmap-card {
-	transform: translateY(-50%);
-}
-.roadmap-content > div:nth-child(2) .roadmap-card,
-.roadmap-content > div:nth-child(4) .roadmap-card {
+.roadmap-cards > div:nth-child(2) .roadmap-card,
+.roadmap-cards > div:nth-child(4) .roadmap-card {
 	transform: translateY(80%);
 }
-.card-stripline {
+.roadmap-stripline {
 	position: relative;
 	flex-shrink: 0;
 }
@@ -76,4 +78,46 @@
 	position: absolute;
 	bottom: 0;
 	right: 0;
+}
+
+@media screen and (max-width: 720px) {
+	.roadmap-cards {
+		display: flex;
+		flex-direction: column;
+		gap: 3rem;
+		top: 20%;
+		left: 50%;
+		width: 100%;
+	}
+	.roadmap-card-bundle {
+		width: 100%;
+	}
+	.roadmap-card {
+		position: relative;
+		width: 100%;
+		height: 150px;
+		max-width: 450px;
+		margin-inline: auto;
+	}
+	.roadmap-cards > div:nth-child(1) .roadmap-card,
+	.roadmap-cards > div:nth-child(3) .roadmap-card,
+	.roadmap-cards > div:last-child .roadmap-card {
+		transform: translateY(0%);
+	}
+	.roadmap-cards > div:nth-child(2) .roadmap-card,
+	.roadmap-cards > div:nth-child(4) .roadmap-card {
+		transform: translateY(0%);
+	}
+	.roadmap-stripline {
+		display: none;
+	}
+	.card-content {
+		display: grid;
+		grid-template-columns: 3.75rem 1fr;
+		grid-template-rows: 2rem 1fr;
+		place-items: start;
+		column-gap: 1rem;
+
+		padding: 1rem;
+	}
 }

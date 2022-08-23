@@ -5,7 +5,6 @@
 }
 
 .hero-content {
-	position: relative;
 	height: calc(100vh - var(--header-height));
 	display: grid;
 	place-content: center;
@@ -24,8 +23,10 @@
 	width: 100%;
 }
 .hero-button {
-	width: clamp(150px, 20vw, 220px);
-	height: 50px;
+	width: clamp(8.75rem, 30vw, 13.75rem);
+	min-width: 140px;
+	height: 3.125rem;
+	min-height: 50px;
 
 	display: grid;
 	position: relative;
@@ -114,19 +115,41 @@
 	transform: translateX(-50%);
 	width: 100%;
 	min-width: 945px;
-	/* width: clamp(300px, 100vw, 2560px); */
-	/* min-width: 1440px; */
 	pointer-events: none;
 }
 .hero-background-front {
-	top: 55%;
-	/* bottom: -58%; */
+	top: 60%;
 }
 .hero-background-middle {
-	top: 20%;
-	/* bottom: -8%; */
+	top: 25%;
 }
 .hero-background-back {
-	top: 3%;
-	/* bottom: -11%; */
+	top: 9%;
+}
+.hero-background-image {
+	width: 100%;
+}
+.image-front {
+	animation: image-waving 4900ms infinite alternate cubic-bezier(0.35, 0, 0.35, 1);
+}
+.image-middle {
+	animation: image-waving 5450ms infinite alternate cubic-bezier(0.35, 0, 0.35, 1);
+}
+.image-back {
+	animation: image-waving 5700ms infinite alternate cubic-bezier(0.35, 0, 0.35, 1);
+}
+
+@keyframes image-waving {
+	0% {
+		transform: translateY(0%);
+	}
+	100% {
+		transform: translateY(3%);
+	}
+}
+
+@media screen and (max-width: 55rem) {
+	.hero-scroll-icon {
+		display: none;
+	}
 }
