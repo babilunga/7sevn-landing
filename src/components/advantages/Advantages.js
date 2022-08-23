@@ -37,13 +37,10 @@ function Advantages({ setCurrentSection }) {
 		} else if (proportion < 0) {
 			setCurrentSection(0);
 		}
-	}, [proportion, liquidityRef, poolsRef, dashboardRef]);
+	}, [proportion, liquidityRef, poolsRef, dashboardRef, setCurrentSection]);
 
 	return (
-		<section
-			aria-label='Advantages section'
-			// id='advantages'
-			className='advantages | layer-adv'>
+		<section aria-label='Advantages section' className='advantages | layer-adv'>
 			<div className='advantages-content | flex container'>
 				<img
 					style={sectionNameIntersection(proportion)}

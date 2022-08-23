@@ -24,6 +24,8 @@ html {
 	--secondary-color: #808080;
 
 	--gradient-main: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c, #3f87a6, #f69d3c);
+
+	overflow: hidden;
 }
 .scrolling-view {
 	-ms-overflow-style: none; /* Internet Explorer 10+ */

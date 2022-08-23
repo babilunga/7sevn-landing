@@ -8,7 +8,6 @@ import {
 	sectionNameIntersection,
 	textContentChanger,
 	disappearIntersection,
-	isWindowSmall,
 } from '../../helpers/utilities.js';
 
 import dividends from '../../assets/img/why/dividends.png';
@@ -54,7 +53,7 @@ function Why({ setCurrentSection }) {
 		if (proportion > -0.1 && proportion < 1) {
 			setCurrentSection(2);
 		}
-	}, [proportion, windowWidth]);
+	}, [proportion, setCurrentSection, windowWidth]);
 
 	return (
 		<section aria-label='Why Sevn section' className='why | layer-why'>
@@ -66,9 +65,24 @@ function Why({ setCurrentSection }) {
 					alt='Uppercase text Why, section name'
 				/>
 				<div className='why-media-group'>
-					<img ref={dividendsRef} className='why-media-dividends' src={dividends} alt='' />
-					<img ref={airdropsRef} className='why-media-airdrops' src={airdrops} alt='' />
-					<img ref={reductionRef} className='why-media-reduction' src={reduction} alt='' />
+					<img
+						ref={dividendsRef}
+						className='why-media-dividends'
+						src={dividends}
+						alt='Big blue safe with purple coins inside with 7Sevn logo on them.'
+					/>
+					<img
+						ref={airdropsRef}
+						className='why-media-airdrops'
+						src={airdrops}
+						alt='Wooden box with d7Sevn logo tag on it, flying on the parachute, wind goes by it.'
+					/>
+					<img
+						ref={reductionRef}
+						className='why-media-reduction'
+						src={reduction}
+						alt='Two smaller percent signs flying around a bigger one.'
+					/>
 				</div>
 				<div className='why-text' style={disappearIntersection(proportion)}>
 					<h2 className='why-title | fs-400 fw-black'>{textContentChanger(titles, proportion)}</h2>

@@ -45,10 +45,12 @@
 		gap: 40px;
 	}
 	.why-media-group {
+		flex: unset;
 		width: 100%;
-		transform: translateY(15%);
+		height: var(--image-size-calc);
 	}
 	.why-text {
+		flex: unset;
 		display: flex;
 		align-items: center;
 		justify-content: flex-start;
