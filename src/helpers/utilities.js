@@ -185,3 +185,11 @@ export function roadmapIntersection(proportion) {
 
 	return style;
 }
+
+export function isWindowWidthEqualOrLessThan(width) {
+	if (window.innerWidth <= width) {
+		return true;
+	} else {
+		return false;
+	}
+}

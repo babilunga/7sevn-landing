@@ -4,6 +4,14 @@ import three from '../assets/img/roadmap/three.svg';
 import four from '../assets/img/roadmap/four.svg';
 import five from '../assets/img/roadmap/five.svg';
 
+export const headerData = {
+	navigation: [
+		{ title: 'Advantages', id: '#advantages' },
+		{ title: 'Why Sevn', id: '#why-sevn' },
+		{ title: 'Roadmap', id: '#roadmap' },
+	],
+};
+
 export const advantagesData = {
 	titles: ['Best liquidity for GamiFi', 'Most profitable pools', 'Dashboard'],
 	descriptions: [
@@ -16,7 +24,7 @@ export const advantagesData = {
 export const whyData = {
 	titles: ['Dividends', 'Token Airdrops', 'Fee Reduction'],
 	descriptions: [
-		'Trade utility tokens of gaming projects with lowest slippage and transaction costs',
+		'Earn part of the Dex profit by staking your Sevn',
 		'Participate in airdrops on newly listed tokens by holding Sevn',
 		'Hold Sevn and trade with grate discount',
 	],
@@ -50,4 +58,11 @@ export const roadmapData = {
 			steps: ['Gaming Project Incubator', 'Crowdfunding Platform', 'Liquidity Aggregator'],
 		},
 	],
+};
+
+export const links = {
+	telegram: '',
+	twitter: '',
+	medium: '',
+	joinCommunity: '',
 };

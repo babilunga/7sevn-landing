@@ -82,12 +82,14 @@
 
 @media screen and (max-width: 720px) {
 	.roadmap-cards {
+		position: relative;
 		display: flex;
 		flex-direction: column;
 		gap: 3rem;
-		top: 20%;
-		left: 50%;
+		top: 0%;
+		left: 0%;
 		width: 100%;
+		margin-bottom: 150px;
 	}
 	.roadmap-card-bundle {
 		width: 100%;

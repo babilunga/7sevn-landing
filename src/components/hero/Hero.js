@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import '../../styles/components/hero.css';
-import { useContext, useEffect } from 'react';
+import { useContext } from 'react';
 import ProportionContext from '../../context/ProportionContext';
 
 import scrollIcon from '../../assets/img/ui/scroll-icon.svg';
@@ -12,10 +12,6 @@ import { heroContentIntersection, backgroundIntersection } from '../../helpers/u
 
 function Hero() {
 	const { proportion } = useContext(ProportionContext);
-
-	useEffect(() => {
-		console.log(proportion);
-	}, [proportion]);
 
 	return (
 		<section className='hero | layer-hero' aria-labelledby='hero-section-title'>

@@ -2,20 +2,21 @@
 /* eslint-disable jsx-a11y/anchor-has-content */
 import '../../styles/components/header.css';
 import logo_sevn from '../../assets/img/logo/sevn.svg';
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef } from 'react';
+import { headerData } from '../../data/data';
 
 function Header() {
+	const { navigation } = headerData;
 	const [isHoveredLogo, setIsHoveredLogo] = useState(false);
 	const [isHamburgerPressed, setIsHamburgerPressed] = useState(false);
 	const buttonRef = useRef(null);
 
-	useEffect(() => {
-		buttonRef.current.classList.toggle('burger-menu-active');
-	}, [isHamburgerPressed]);
-
 	function burgerMenuTrigger(to) {
-		if (to === 'off') setIsHamburgerPressed(false);
-		else setIsHamburgerPressed(prev => !prev);
+		if (to === 'off') {
+			setIsHamburgerPressed(false);
+		} else {
+			setIsHamburgerPressed(prev => !prev);
+		}
 	}
 
 	return (
@@ -32,7 +33,10 @@ function Header() {
 					</div>
 					<img src={logo_sevn} alt='It is a logo text says SEVN' />
 				</a>
-				<button className='burger-menu-trigger' ref={buttonRef} onClick={burgerMenuTrigger}>
+				<button
+					className={`burger-menu-trigger ${isHamburgerPressed ? 'burger-menu-active' : ''}`}
+					ref={buttonRef}
+					onClick={burgerMenuTrigger}>
 					<span className='burger-line-first'></span>
 					<span className='burger-line-second'></span>
 					<span className='burger-line-third'></span>
@@ -42,21 +46,13 @@ function Header() {
 					data-open={isHamburgerPressed}
 					onClick={() => burgerMenuTrigger('off')}>
 					<ul my-role='nav' className='navigation-list | flex'>
-						<li>
-							<a className='nav-link' href='#advantages'>
-								Advantages
-							</a>
-						</li>
-						<li>
-							<a className='nav-link' href='#why-sevn'>
-								Why Sevn
-							</a>
-						</li>
-						<li>
-							<a className='nav-link' href='#roadmap'>
-								Raodmap
-							</a>
-						</li>
+						{navigation.map(({ title, id }) => (
+							<li key={id}>
+								<a className='nav-link' href={id}>
+									{title}
+								</a>
+							</li>
+						))}
 					</ul>
 					<div className='header-media | flex'>
 						<a href='#' className='header-media-item media-telegram'></a>
