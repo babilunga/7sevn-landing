@@ -1,6 +1,6 @@
 import '../../styles/app.css';
 
-import { useEffect, useState } from 'react';
+import { useState, useEffect } from 'react';
 import Header from '../header/Header';
 import Hero from '../hero/Hero';
 import Advantages from '../advantages/Advantages';
@@ -9,30 +9,36 @@ import ScrollContext from '../../context/ScrollContext';
 import StickyView from '../sticky-view/StickyView';
 import Why from '../why/Why';
 import Roadmap from '../roadmap/Roadmap';
-import useWindowResizeObserve from '../../hooks/useWindowResizeObserve';
+
+import { isWindowSmall } from '../../helpers/utilities';
 
 function App() {
 	const [scrollingElement, setScrollingElement] = useState(null);
+	const [currentSection, setCurrentSection] = useState(0);
 
 	function scrollingElRef(ref) {
 		setScrollingElement(ref);
 	}
-
-	const isSmallScreen = useWindowResizeObserve(720);
 
 	return (
 		<div className='app'>
 			<ScrollContext.Provider value={{ scrollingElement }}>
 				<div className='scrolling-view' ref={scrollingElRef}>
 					<div id='top'></div>
-					<Header />
+					<Header currentSection={currentSection} />
 					<StickyView height={'120vh'}>{<Hero />}</StickyView>
 					<div id='advantages'></div>
-					<StickyView height={'180vh'}>{<Advantages />}</StickyView>
+					<StickyView height={isWindowSmall(880) ? '300vh' : '180vh'}>
+						{<Advantages setCurrentSection={setCurrentSection} />}
+					</StickyView>
 					<div id='why-sevn'></div>
-					<StickyView height={'180vh'}>{<Why />}</StickyView>
+					<StickyView height={isWindowSmall(880) ? '300vh' : '180vh'}>
+						{<Why setCurrentSection={setCurrentSection} />}
+					</StickyView>
 					<div id='roadmap'></div>
-					<StickyView height={isSmallScreen ? 'auto' : '250vh'}>{<Roadmap />}</StickyView>
+					<StickyView height={isWindowSmall() ? 'auto' : '270vh'}>
+						{<Roadmap setCurrentSection={setCurrentSection} />}
+					</StickyView>
 				</div>
 			</ScrollContext.Provider>
 		</div>

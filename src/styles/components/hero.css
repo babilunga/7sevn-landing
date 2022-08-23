@@ -45,6 +45,28 @@
 	transition: color 0.25s ease-in-out;
 	cursor: pointer;
 }
+.soon-bud {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	bottom: -3%;
+	right: -3%;
+	background-color: #000;
+	border-top-left-radius: 2rem;
+	color: white;
+	padding-block: 0.3rem;
+	padding-inline: 0.75rem;
+	transform: skew(calc(var(--skew-degree) * 1));
+	font-size: 0.8rem;
+	transition: all 0.25s ease;
+}
+.hero-button:hover .soon-bud,
+.hero-button:focus-visible .soon-bud,
+.hero-button:active .soon-bud {
+	color: black;
+	background-color: white;
+}
 .hero-button::before,
 .hero-button::after {
 	content: '';
@@ -67,14 +89,16 @@
 	transform: scaleX(0);
 	opacity: 0;
 }
-.hero-button:hover::after {
+.hero-button:hover::after,
+.hero-button:active::after {
 	transform: scaleX(1);
 	opacity: 1;
 }
-.hero-button:hover {
+.hero-button:hover,
+.hero-button:active {
 	color: white;
 }
-.hero-button span {
+.hero-button > .hero-button-title {
 	transform: skew(var(--skew-degree));
 }
 .hero-scroll-icon {

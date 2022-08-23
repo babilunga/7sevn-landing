@@ -15,7 +15,7 @@ import {
 } from '../../helpers/utilities';
 import { advantagesData } from '../../data/data';
 
-function Advantages() {
+function Advantages({ setCurrentSection }) {
 	const { proportion } = useContext(ProportionContext);
 
 	const liquidityRef = useRef(null);
@@ -31,6 +31,11 @@ function Advantages() {
 				proportion,
 				'x'
 			);
+		}
+		if (proportion > -0.1 && proportion < 1) {
+			setCurrentSection(1);
+		} else if (proportion < 0) {
+			setCurrentSection(0);
 		}
 	}, [proportion, liquidityRef, poolsRef, dashboardRef]);
 

@@ -61,8 +61,9 @@ export const roadmapData = {
 };
 
 export const links = {
-	telegram: '',
-	twitter: '',
-	medium: '',
-	joinCommunity: '',
+	telegram: '#',
+	twitter: '#',
+	medium: '#',
+	discord: '#',
+	app: '#',
 };

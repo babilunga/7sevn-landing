@@ -5,7 +5,7 @@ const SCROLL_DISTANCE = 200;
 const firstStep = SCROLL_DISTANCE - 50;
 const secondStep = SCROLL_DISTANCE + 50 + 30;
 
-const DISAPPEAR_RANGE = 3.65;
+const DISAPPEAR_RANGE = 5.7;
 
 const DEGREE = '20deg';
 
@@ -126,7 +126,7 @@ export function backgroundIntersection(layer, proportion) {
 			break;
 	}
 
-	if (proportion > 1.8 && layer !== 'front') {
+	if (proportion > 2.2 && layer !== 'front') {
 		style.opacity = 0;
 	}
 
@@ -186,7 +186,7 @@ export function roadmapIntersection(proportion) {
 	return style;
 }
 
-export function isWindowWidthEqualOrLessThan(width) {
+export function isWindowSmall(width = 720) {
 	if (window.innerWidth <= width) {
 		return true;
 	} else {

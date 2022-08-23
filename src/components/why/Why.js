@@ -8,6 +8,7 @@ import {
 	sectionNameIntersection,
 	textContentChanger,
 	disappearIntersection,
+	isWindowSmall,
 } from '../../helpers/utilities.js';
 
 import dividends from '../../assets/img/why/dividends.png';
@@ -18,7 +19,7 @@ import sectionName from '../../assets/img/sections/why.svg';
 
 import { whyData } from '../../data/data';
 
-function Why() {
+function Why({ setCurrentSection }) {
 	const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 	const { proportion } = useContext(ProportionContext);
 	const { titles, descriptions } = whyData;
@@ -43,11 +44,15 @@ function Why() {
 		const red = reductionRef.current;
 
 		if (div && air && red) {
-			if (windowWidth < 640) {
+			if (windowWidth < 880) {
 				mediaIntersectionX([div, air, red], proportion);
 			} else {
 				mediaIntersectionY([div, air, red], proportion);
 			}
+		}
+
+		if (proportion > -0.1 && proportion < 1) {
+			setCurrentSection(2);
 		}
 	}, [proportion, windowWidth]);
 

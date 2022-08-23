@@ -8,11 +8,12 @@ import backgroundBack from '../../assets/img/hero/back.png';
 import backgroundMiddle from '../../assets/img/hero/middle.png';
 import backgroundFront from '../../assets/img/hero/front.png';
 
+import { links } from '../../data/data';
+
 import { heroContentIntersection, backgroundIntersection } from '../../helpers/utilities';
 
 function Hero() {
 	const { proportion } = useContext(ProportionContext);
-
 	return (
 		<section className='hero | layer-hero' aria-labelledby='hero-section-title'>
 			<div className='hero-content | container' style={heroContentIntersection(proportion)}>
@@ -21,11 +22,16 @@ function Hero() {
 				</h1>
 				<p className='hero-text | fs-200 fw-semi-bold'>Best way to swap gaming tokens</p>
 				<div className='hero-button-group | flex'>
-					<a href='#' role='button' className='hero-button'>
-						<span>Join Community</span>
+					<a href={links.discord} target='_blank' rel='noreferrer' className='hero-button'>
+						<span className='hero-button-title | fw-normal'>Join Community</span>
 					</a>
-					<a href='#' role='button' className='hero-button'>
-						<span>Launch App</span>
+					<a
+						href={links.app}
+						// add this after there is a real link for the app
+						// target='_blank' rel='noreferrer'
+						className='hero-button'>
+						<span className='hero-button-title | fw-normal'>Launch App</span>
+						<span className='soon-bud'>soon</span>
 					</a>
 				</div>
 			</div>
