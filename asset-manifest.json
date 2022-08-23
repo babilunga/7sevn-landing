@@ -1,9 +1,9 @@
 {
   "files": {
-    "main.css": "/7sevn-landing/static/css/main.db0c51ec.css",
-    "main.js": "/7sevn-landing/static/js/main.c808774c.js",
+    "main.css": "/7sevn-landing/static/css/main.1c10a9ad.css",
+    "main.js": "/7sevn-landing/static/js/main.0452bcaa.js",
     "static/media/dashboard.png": "/7sevn-landing/static/media/dashboard.8f1cda5c1b7325de9324.png",
-    "static/media/liquidity.png": "/7sevn-landing/static/media/liquidity.fec2b089e2a777573706.png",
+    "static/media/liquidity.png": "/7sevn-landing/static/media/liquidity.e4304d85d6e0e9b39206.png",
     "static/media/dividends.png": "/7sevn-landing/static/media/dividends.abf413807076963e3548.png",
     "static/media/reduction.png": "/7sevn-landing/static/media/reduction.359d4928e4b543a51fc5.png",
     "static/media/pools.png": "/7sevn-landing/static/media/pools.62b4d2bc5f087995aa49.png",
@@ -14,13 +14,13 @@
     "static/media/advantages.svg": "/7sevn-landing/static/media/advantages.bed9983a24c8d235af851707a63bd70b.svg",
     "static/media/why.svg": "/7sevn-landing/static/media/why.11c803a62d6535470f6e46f3c11a9cc7.svg",
     "static/media/roadmap.svg": "/7sevn-landing/static/media/roadmap.df714c0512049ad8467b9c803357491d.svg",
+    "static/media/discord-fill.svg": "/7sevn-landing/static/media/discord-fill.f7bf3931bbac346d10ca.svg",
+    "static/media/discord-stroke.svg": "/7sevn-landing/static/media/discord-stroke.96ea0d8243ae75cc1bbe.svg",
     "static/media/sevn.svg": "/7sevn-landing/static/media/sevn.21a5ebe9d0349934cbe5f8b4be153ea2.svg",
     "index.html": "/7sevn-landing/index.html",
     "static/media/twitter-stroke.svg": "/7sevn-landing/static/media/twitter-stroke.676e1fddfd39997f179f.svg",
     "static/media/twitter-fill.svg": "/7sevn-landing/static/media/twitter-fill.c62291192c03edfd96ec.svg",
-    "static/media/telegram-fill.svg": "/7sevn-landing/static/media/telegram-fill.050a571d3bd888dc7dad.svg",
     "static/media/three.svg": "/7sevn-landing/static/media/three.8c90314d0a18a221534b983ad5d08614.svg",
-    "static/media/telegram-stroke.svg": "/7sevn-landing/static/media/telegram-stroke.f8c065554d5bf08c5808.svg",
     "static/media/five.svg": "/7sevn-landing/static/media/five.99b48c68319ffa8c8716efdfb6122fa6.svg",
     "static/media/two.svg": "/7sevn-landing/static/media/two.69b68639bdd226f4ba8f8f2ae7137e98.svg",
     "static/media/descending.svg": "/7sevn-landing/static/media/descending.8410c2c944b2a29e9ca3493a32c1c21b.svg",
@@ -30,11 +30,11 @@
     "static/media/medium-stroke.svg": "/7sevn-landing/static/media/medium-stroke.af39f0bd4512a76400ca.svg",
     "static/media/scroll-icon.svg": "/7sevn-landing/static/media/scroll-icon.2f9ed444406f37f4a2faa89abf2f089f.svg",
     "static/media/one.svg": "/7sevn-landing/static/media/one.1a571902da79bdb50fb661c37280ac49.svg",
-    "main.db0c51ec.css.map": "/7sevn-landing/static/css/main.db0c51ec.css.map",
-    "main.c808774c.js.map": "/7sevn-landing/static/js/main.c808774c.js.map"
+    "main.1c10a9ad.css.map": "/7sevn-landing/static/css/main.1c10a9ad.css.map",
+    "main.0452bcaa.js.map": "/7sevn-landing/static/js/main.0452bcaa.js.map"
   },
   "entrypoints": [
-    "static/css/main.db0c51ec.css",
-    "static/js/main.c808774c.js"
+    "static/css/main.1c10a9ad.css",
+    "static/js/main.0452bcaa.js"
   ]
 }
