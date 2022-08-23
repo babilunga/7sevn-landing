@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/7sevn-landing/static/css/main.72e2e3d4.css",
-    "main.js": "/7sevn-landing/static/js/main.beb1070d.js",
+    "main.css": "/7sevn-landing/static/css/main.ffa40405.css",
+    "main.js": "/7sevn-landing/static/js/main.9fe5cb57.js",
     "static/media/dashboard.png": "/7sevn-landing/static/media/dashboard.8f1cda5c1b7325de9324.png",
     "static/media/liquidity.png": "/7sevn-landing/static/media/liquidity.fec2b089e2a777573706.png",
-    "static/media/airdrops.png": "/7sevn-landing/static/media/airdrops.82e5674a37b8e18eb458.png",
     "static/media/reduction.png": "/7sevn-landing/static/media/reduction.abf413807076963e3548.png",
     "static/media/dividends.png": "/7sevn-landing/static/media/dividends.359d4928e4b543a51fc5.png",
     "static/media/pools.png": "/7sevn-landing/static/media/pools.62b4d2bc5f087995aa49.png",
+    "static/media/airdrops.png": "/7sevn-landing/static/media/airdrops.ba117b117a110e2dc146.png",
     "static/media/front.png": "/7sevn-landing/static/media/front.51e580918a099173bbc4.png",
     "static/media/middle.png": "/7sevn-landing/static/media/middle.40d4a1cefdd94f3b1259.png",
     "static/media/back.png": "/7sevn-landing/static/media/back.87f0d9936e35c8b4e262.png",
@@ -30,11 +30,11 @@
     "static/media/medium-stroke.svg": "/7sevn-landing/static/media/medium-stroke.af39f0bd4512a76400ca.svg",
     "static/media/scroll-icon.svg": "/7sevn-landing/static/media/scroll-icon.2f9ed444406f37f4a2faa89abf2f089f.svg",
     "static/media/one.svg": "/7sevn-landing/static/media/one.1a571902da79bdb50fb661c37280ac49.svg",
-    "main.72e2e3d4.css.map": "/7sevn-landing/static/css/main.72e2e3d4.css.map",
-    "main.beb1070d.js.map": "/7sevn-landing/static/js/main.beb1070d.js.map"
+    "main.ffa40405.css.map": "/7sevn-landing/static/css/main.ffa40405.css.map",
+    "main.9fe5cb57.js.map": "/7sevn-landing/static/js/main.9fe5cb57.js.map"
   },
   "entrypoints": [
-    "static/css/main.72e2e3d4.css",
-    "static/js/main.beb1070d.js"
+    "static/css/main.ffa40405.css",
+    "static/js/main.9fe5cb57.js"
   ]
 }
