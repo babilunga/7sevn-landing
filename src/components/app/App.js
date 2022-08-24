@@ -10,7 +10,9 @@ import StickyView from '../sticky-view/StickyView';
 import Why from '../why/Why';
 import Roadmap from '../roadmap/Roadmap';
 
-import { isWindowSmall } from '../../helpers/utilities';
+import { isWindowLessThan } from '../../helpers/intersectionUtilities';
+import calcActualViewportHeight from '../../helpers/calcActualViewportHeight';
+import SectionAncor from './SectionAncor';
 
 function App() {
 	const [scrollingElement, setScrollingElement] = useState(null);
@@ -21,32 +23,30 @@ function App() {
 	}
 
 	useLayoutEffect(() => {
-		const vh = window.innerHeight * 0.01;
-		document.documentElement.style.setProperty('--vh', `${vh}px`);
-
-		window.addEventListener('resize', () => {
-			const vh = window.innerHeight * 0.01;
-			document.documentElement.style.setProperty('--vh', `${vh}px`);
-		});
+		calcActualViewportHeight();
 	}, []);
 
 	return (
 		<div className='app'>
 			<ScrollContext.Provider value={{ scrollingElement }}>
 				<div className='scrolling-view' ref={scrollingElRef}>
-					<div id='top'></div>
+					<SectionAncor id={'top'} />
+
 					<Header currentSection={currentSection} />
 					<StickyView height={'120vh'}>{<Hero />}</StickyView>
-					<div id='advantages'></div>
-					<StickyView height={isWindowSmall(880) ? '350vh' : '180vh'}>
+					<SectionAncor id={'advantages'} />
+
+					<StickyView height={isWindowLessThan(880) ? '350vh' : '180vh'}>
 						{<Advantages setCurrentSection={setCurrentSection} />}
 					</StickyView>
-					<div id='why-sevn'></div>
-					<StickyView height={isWindowSmall(880) ? '350vh' : '180vh'}>
+					<SectionAncor id={'why-sevn'} />
+
+					<StickyView height={isWindowLessThan(880) ? '350vh' : '180vh'}>
 						{<Why setCurrentSection={setCurrentSection} />}
 					</StickyView>
-					<div id='roadmap'></div>
-					<StickyView height={isWindowSmall() ? 'auto' : '270vh'}>
+					<SectionAncor id={'roadmap'} />
+
+					<StickyView height={isWindowLessThan(720) ? 'auto' : '270vh'}>
 						{<Roadmap setCurrentSection={setCurrentSection} />}
 					</StickyView>
 				</div>

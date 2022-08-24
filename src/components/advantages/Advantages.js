@@ -12,7 +12,7 @@ import {
 	textContentChanger,
 	mediaIntersectionX,
 	sectionNameIntersection,
-} from '../../helpers/utilities';
+} from '../../helpers/intersectionUtilities';
 import { advantagesData } from '../../data/data';
 
 function Advantages({ setCurrentSection }) {

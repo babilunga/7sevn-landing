@@ -9,8 +9,8 @@ import { roadmapData } from '../../data/data.js';
 import {
 	sectionNameIntersection,
 	roadmapIntersection,
-	isWindowSmall,
-} from '../../helpers/utilities';
+	isWindowLessThan,
+} from '../../helpers/intersectionUtilities';
 
 import RoadmapCard from './RoadmapCard';
 import RoadmapStrip from './RadmapStrip';
@@ -20,10 +20,10 @@ function Roadmap({ setCurrentSection }) {
 	const { cardsData } = roadmapData;
 
 	useEffect(() => {
-		if (proportion > -0.1 && proportion < 1) {
+		if (proportion > -0.1) {
 			setCurrentSection(3);
 		}
-	}, [proportion]);
+	}, [proportion, setCurrentSection]);
 
 	return (
 		<section className='roadmap | layer-roadmap' aria-labelledby='roadmap-section-title'>
@@ -36,7 +36,7 @@ function Roadmap({ setCurrentSection }) {
 			<div className='roadmap-content | container'>
 				<div
 					className='roadmap-cards'
-					style={isWindowSmall() ? {} : roadmapIntersection(proportion)}>
+					style={isWindowLessThan(720) ? {} : roadmapIntersection(proportion)}>
 					{cardsData.map(({ image, title, steps }, index, array) => (
 						<div key={index + 99} className='roadmap-card-bundle'>
 							<RoadmapCard image={image} title={title} steps={steps} />

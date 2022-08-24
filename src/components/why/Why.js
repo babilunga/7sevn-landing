@@ -8,7 +8,7 @@ import {
 	sectionNameIntersection,
 	textContentChanger,
 	disappearIntersection,
-} from '../../helpers/utilities.js';
+} from '../../helpers/intersectionUtilities.js';
 
 import dividends from '../../assets/img/why/dividends.png';
 import airdrops from '../../assets/img/why/airdrops.png';

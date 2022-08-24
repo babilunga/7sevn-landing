@@ -186,7 +186,7 @@ export function roadmapIntersection(proportion) {
 	return style;
 }
 
-export function isWindowSmall(width = 720) {
+export function isWindowLessThan(width = 720) {
 	if (window.innerWidth <= width) {
 		return true;
 	} else {

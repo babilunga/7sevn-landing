@@ -10,7 +10,10 @@ import backgroundFront from '../../assets/img/hero/front.png';
 
 import { links } from '../../data/data';
 
-import { heroContentIntersection, backgroundIntersection } from '../../helpers/utilities';
+import {
+	heroContentIntersection,
+	backgroundIntersection,
+} from '../../helpers/intersectionUtilities';
 
 function Hero() {
 	const { proportion } = useContext(ProportionContext);
