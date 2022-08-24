@@ -2,7 +2,7 @@
 	position: relative;
 	display: flex;
 	flex-direction: column;
-	height: 100vh;
+	height: var(--vh100);
 	width: 100vw;
 	overflow: hidden;
 

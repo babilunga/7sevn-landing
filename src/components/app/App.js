@@ -1,6 +1,6 @@
 import '../../styles/app.css';
 
-import { useState, useEffect } from 'react';
+import { useState, useLayoutEffect } from 'react';
 import Header from '../header/Header';
 import Hero from '../hero/Hero';
 import Advantages from '../advantages/Advantages';
@@ -20,6 +20,16 @@ function App() {
 		setScrollingElement(ref);
 	}
 
+	useLayoutEffect(() => {
+		const vh = window.innerHeight * 0.01;
+		document.documentElement.style.setProperty('--vh', `${vh}px`);
+
+		window.addEventListener('resize', () => {
+			const vh = window.innerHeight * 0.01;
+			document.documentElement.style.setProperty('--vh', `${vh}px`);
+		});
+	}, []);
+
 	return (
 		<div className='app'>
 			<ScrollContext.Provider value={{ scrollingElement }}>
@@ -28,11 +38,11 @@ function App() {
 					<Header currentSection={currentSection} />
 					<StickyView height={'120vh'}>{<Hero />}</StickyView>
 					<div id='advantages'></div>
-					<StickyView height={isWindowSmall(880) ? '300vh' : '180vh'}>
+					<StickyView height={isWindowSmall(880) ? '350vh' : '180vh'}>
 						{<Advantages setCurrentSection={setCurrentSection} />}
 					</StickyView>
 					<div id='why-sevn'></div>
-					<StickyView height={isWindowSmall(880) ? '300vh' : '180vh'}>
+					<StickyView height={isWindowSmall(880) ? '350vh' : '180vh'}>
 						{<Why setCurrentSection={setCurrentSection} />}
 					</StickyView>
 					<div id='roadmap'></div>

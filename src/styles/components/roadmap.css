@@ -2,11 +2,10 @@
 	position: relative;
 	padding-top: var(--header-height);
 	position: relative;
-	height: 100vh;
 }
 .roadmap-content {
 	position: relative;
-	height: 100%;
+	height: var(--content-height);
 	width: 100%;
 }
 .roadmap-cards {
@@ -99,6 +98,7 @@
 		width: 100%;
 		height: 150px;
 		max-width: 450px;
+		min-width: auto;
 		margin-inline: auto;
 	}
 	.roadmap-cards > div:nth-child(1) .roadmap-card,

@@ -2,8 +2,13 @@ html {
 	font-family: 'Montserrat', sans-serif;
 }
 #root {
+	--vh100: calc(var(--vh, 1vh) * 100);
+
 	--header-padding: 3.5rem;
 	--header-height: 5rem;
+
+	--content-height: calc(var(--vh100) - var(--header-height));
+	--container-padding: 4rem;
 
 	--image-size: 21.875rem;
 	--image-size-calc: calc(var(--image-size) - (90px - 10vh));
@@ -38,7 +43,7 @@ html {
 	position: absolute;
 	bottom: 0;
 	left: 0;
-	max-height: calc(100vh - var(--header-height));
+	max-height: calc(var(--vh100) - var(--header-height));
 	height: fit-content;
 	transition: opacity 200ms ease-in;
 	z-index: 999;
@@ -46,7 +51,7 @@ html {
 
 /* Utility classes */
 .container {
-	width: min(100% - var(--container-padding, 3rem), 80rem);
+	width: min(100% - var(--container-padding, 2rem), 80rem);
 	margin-inline: auto;
 }
 .even-columns {

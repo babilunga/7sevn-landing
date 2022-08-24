@@ -5,7 +5,7 @@
 }
 
 .hero-content {
-	height: calc(100vh - var(--header-height));
+	height: var(--content-height);
 	display: grid;
 	place-content: center;
 	place-items: center;
@@ -103,7 +103,7 @@
 }
 .hero-scroll-icon {
 	position: absolute;
-	top: calc(100vh - 3rem);
+	top: calc(var(--vh100) - 3rem);
 	left: 50%;
 	transform: translateX(-50%) translateY(-50%);
 	margin-top: auto;
