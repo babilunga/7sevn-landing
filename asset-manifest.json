@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/7sevn-landing/static/css/main.553bf4e8.css",
-    "main.js": "/7sevn-landing/static/js/main.9db1ff10.js",
+    "main.js": "/7sevn-landing/static/js/main.d509a580.js",
     "static/media/dashboard.png": "/7sevn-landing/static/media/dashboard.8f1cda5c1b7325de9324.png",
     "static/media/liquidity.png": "/7sevn-landing/static/media/liquidity.e4304d85d6e0e9b39206.png",
     "static/media/dividends.png": "/7sevn-landing/static/media/dividends.abf413807076963e3548.png",
@@ -31,10 +31,10 @@
     "static/media/scroll-icon.svg": "/7sevn-landing/static/media/scroll-icon.2f9ed444406f37f4a2faa89abf2f089f.svg",
     "static/media/one.svg": "/7sevn-landing/static/media/one.1a571902da79bdb50fb661c37280ac49.svg",
     "main.553bf4e8.css.map": "/7sevn-landing/static/css/main.553bf4e8.css.map",
-    "main.9db1ff10.js.map": "/7sevn-landing/static/js/main.9db1ff10.js.map"
+    "main.d509a580.js.map": "/7sevn-landing/static/js/main.d509a580.js.map"
   },
   "entrypoints": [
     "static/css/main.553bf4e8.css",
-    "static/js/main.9db1ff10.js"
+    "static/js/main.d509a580.js"
   ]
 }
